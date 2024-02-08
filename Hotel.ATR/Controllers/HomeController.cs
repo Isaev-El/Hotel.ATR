@@ -1,8 +1,8 @@
-﻿using Hotel.ATR.Models;
+﻿using Hotel.ATR.Portal.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Hotel.ATR.Controllers
+namespace Hotel.ATR.Portal.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,6 +14,11 @@ namespace Hotel.ATR.Controllers
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
         {
             return View();
         }

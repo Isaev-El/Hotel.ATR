@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Room List View || Hotel ATR</title>
+    <title>Home Page || Hotel ATR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,74 +17,117 @@
     <link rel="stylesheet" href="~/style.css">
     <link rel="stylesheet" href="~/css/responsive.css">
     <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    @RenderSection("styles", false)
+
 </head>
 <body>
-
-
-
-    <!-- Header Area Start -->
-    <header class="header-area fixed header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
-                    <div class="logo">
+        <!-- Header Area Start -->
+		<header class="header-area fixed header-sticky">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
+		                <div class="logo">
                         <a href="index.html"><img src="~/img/logo/logo.png" alt="HotelATR"></a>
+		                </div>
+		            </div>
+		            <div class="col-lg-7 col-md-8 col-sm-8 hidden-xs">
+		                <div class="header-top fix">
+		                    <div class="header-contact">
+		                        <span class="text-theme">Contact:</span>
+		                        <span>0088-234-675-827</span>
+		                    </div>
+		                    <div class="header-links">
+		                        <a href="https://www.facebook.com/"><i class="zmdi zmdi-facebook"></i></a>
+		                        <a href="https://twitter.com/"><i class="zmdi zmdi-twitter"></i></a>
+		                        <a href="https://plus.google.com/"><i class="zmdi zmdi-google-plus"></i></a>
+		                        <a href="https://www.instagram.com/"><i class="zmdi zmdi-instagram"></i></a>
+		                        <a href="https://www.pinterest.com/"><i class="zmdi zmdi-pinterest"></i></a>
+		                    </div>
+		                </div>
+			            <!-- Mainmenu Start -->
+                        <div class="main-menu hidden-xs">
+                        @{
+                            Html.RenderPartial("_MainMenu");
+                        }
+                        </div>
+			            <!-- Mainmenu End -->
+		            </div>
+		        </div>
+		    </div>
+            <!-- Mobile Menu Area start -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a href="index.html">HOME</a></li>
+                                        <li><a href="room-grid.html">ROOMS</a>
+                                            <ul class="submenu">
+                                                <li><a href="room-list.html">ROOM LIST</a></li>
+                                                <li><a href="room-details.html">ROOM DETAILS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="location.html">LOCATION</a></li>
+                                        <li><a href="event.html">EVENT</a></li>
+                                        <li><a href="team.html">TEAM</a></li>
+                                        <li><a href="contact.html">CONTACT</a></li>
+                                    </ul>
+                                </nav>
+                            </div>					
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-8 col-sm-8 hidden-xs">
-                    <div class="header-top fix">
-                        <div class="header-contact">
-                            <span class="text-theme">Contact:</span>
-                            <span>0088-234-675-827</span>
-                        </div>
-                        <div class="header-links">
-                            <a href="https://www.facebook.com/"><i class="zmdi zmdi-facebook"></i></a>
-                            <a href="https://twitter.com/"><i class="zmdi zmdi-twitter"></i></a>
-                            <a href="https://plus.google.com/"><i class="zmdi zmdi-google-plus"></i></a>
-                            <a href="https://www.instagram.com/"><i class="zmdi zmdi-instagram"></i></a>
-                            <a href="https://www.pinterest.com/"><i class="zmdi zmdi-pinterest"></i></a>
+            </div>
+            <!-- Mobile Menu Area end --> 
+		</header>
+		<!-- Header Area End -->
+    <!-- Background Area Start -->
+    <section class="slider-area">
+        <div class="slider-wrapper">
+            <div class="single-slide" style="background-image: url('img/slider/1.jpg');">
+                <div class="banner-content overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="text-content-wrapper">
+                                    <div class="text-content text-center">
+                                        <h1 class="pt-180">welcome to hotel atr</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="banner-btn">
+                                            <a class="default-btn" href="room-grid.html">explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Mainmenu Start -->
-                    <div class="main-menu hidden-xs">
-
+                </div>
+            </div>
+            <div class="single-slide" style="background-image: url('img/slider/2.jpg');">
+                <div class="banner-content overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="text-content-wrapper slide-two">
+                                    <div class="text-content text-center">
+                                        <h1 class="pt-180">welcome to hotel atr</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="banner-btn">
+                                            <a class="default-btn" href="room-grid.html">explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Mainmenu End -->
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu Area start -->
-        <div class="mobile-menu-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="mobile-menu">
-                            <nav id="dropdown">
-                                <ul>
-                                    <li><a href="index.html">HOME</a></li>
-                                    <li>
-                                        <a href="room-grid.html">ROOMS</a>
-                                        <ul class="submenu">
-                                            <li><a href="room-list.html">ROOM LIST</a></li>
-                                            <li><a href="room-details.html">ROOM DETAILS</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="location.html">LOCATION</a></li>
-                                    <li><a href="event.html">EVENT</a></li>
-                                    <li><a href="team.html">TEAM</a></li>
-                                    <li><a href="contact.html">CONTACT</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu Area end -->
-    </header>
-    <!-- Header Area End -->
-
-
+    </section>
+    <!-- Background Area End -->
 
     @RenderBody()
 
@@ -144,22 +187,22 @@
                                 <h3>collections</h3>
                                 <div class="instagram-image">
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/1.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/1.jpg" alt=""></a>
                                     </div>
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/2.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/2.jpg" alt=""></a>
                                     </div>
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/3.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/3.jpg" alt=""></a>
                                     </div>
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/4.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/4.jpg" alt=""></a>
                                     </div>
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/5.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/5.jpg" alt=""></a>
                                     </div>
                                     <div class="footer-img">
-                                    <a href="room-grid.html"><img src="~/img/footer/6.jpg" alt=""></a>
+                                        <a href="room-grid.html"><img src="~/img/footer/6.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -202,6 +245,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    @RenderSection("script", false)
+
 </body>
 </html>

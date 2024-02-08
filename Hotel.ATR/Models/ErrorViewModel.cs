@@ -1,4 +1,4 @@
-namespace Hotel.ATR.Models
+namespace Hotel.ATR.Portal.Models
 {
     public class ErrorViewModel
     {
